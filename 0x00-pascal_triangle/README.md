@@ -53,7 +53,7 @@ Be mindful of how lists are stored and copied, especially when creating new rows
 
 Use try-except blocks as needed to handle potential errors, such as invalid input types or values.
 
-# Efficiency and Optimization:
+#### Efficiency and Optimization:
 
 Consider the time and space complexity of different approaches to generating Pascal’s Triangle.
 Evaluate and apply optimizations to improve the performance of the solution.
