@@ -1,23 +1,30 @@
 #!/usr/bin/python3
+"""
+This module contains the canUnlockAll function that checks
+if all boxes can be unlocked given a list of keys.
+"""
 
 
 def canUnlockAll(boxes):
     """
-    Determines whether a series of locked boxes can be opened
-    based on keys that can be attained.
-    Solution to the lockboxes problem
+    Determines if all the boxes can be unlocked.
+    
+    Parameters:
+    boxes (list of lists): List where each sublist contains keys to other boxes.
+    
+    Returns:
+    bool: True if all boxes can be unlocked, False otherwise.
     """
-    if (type(boxes)) is not list:
-        return False
-    elif (len(boxes)) == 0:
-        return False
-
-    for k in range(1, len(boxes) - 1):
-        boxes_checked = False
-        for idx in range(len(boxes)):
-            boxes_checked = k in boxes[idx] and k != idx
-            if boxes_checked:
-                break
-        if boxes_checked is False:
-            return boxes_checked
-    return True
+    unlocked = [False] * len(boxes)
+    unlocked[0] = True  # The first box is always unlocked
+    keys = [0]  # Start with the first box's key
+    
+    while keys:
+        current_key = keys.pop(0)
+        
+        for key in boxes[current_key]:
+            if key < len(boxes) and not unlocked[key]:
+                unlocked[key] = True
+                keys.append(key)
+    
+    return all(unlocked)
