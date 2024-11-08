@@ -41,7 +41,7 @@ By studying these concepts and utilizing the resources provided, you will be equ
 
 ### Tasks
 
-`0. N queens`
+* `0. N queens`
 The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard. Write a program that solves the N queens problem.
 
 * Usage: nqueens N
