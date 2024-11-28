@@ -39,6 +39,7 @@ Below are the key concepts and resources necessary to complete this project succ
 
 * [Dynamic Programming - Coin Change Problem](https://www.youtube.com/watch?v=jgiZlGzXMBw) for a visual and step-by-step explanation of the dynamic programming 
 approach.
+
 By thoroughly understanding these concepts and utilizing the provided resources, you will be well-prepared to tackle the coin change problem. 
 You will need to decide whether a greedy algorithm suffices for your particular set of coin denominations or if a more comprehensive 
 dynamic programming approach is necessary to ensure correctness and efficiency.
